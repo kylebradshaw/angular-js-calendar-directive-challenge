@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html ng-app="calendarDemoApp">
+
 <head>
-<title>Calendar Directive Challenge</title>
-<link rel="stylesheet" type="text/css" href="./main.css" />
+    <title>Calendar Directive Challenge</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/united/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./main.css" />
 </head>
-<body>
 
-<!-- your code for nav and calendar directive instance here -->
-
-<script type="text/javascript" src="./bower_components/angular/angular.js"></script>
-<script type="text/javascript" src="./utilities/calendar-range/calendarRange.js"></script>
-<script type="text/javascript" src="./app.js"></script>
+<body ng-controller="calendarCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <select class="form-control" ng-model="calForm.month" ng-options="idx as month for (idx, month) in calRange.months">
+                        </select>
+                        <select class="form-control" ng-model="calForm.year" ng-options="year for year in calRange.years">
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <pre>{{calRange | json}}</pre>
+    <!--   <calendar></calendar> -->
+    <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="./utilities/calendar-range/calendarRange.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
 </body>
+
 </html>
