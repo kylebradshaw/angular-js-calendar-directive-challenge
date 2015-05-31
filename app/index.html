@@ -9,22 +9,16 @@
 </head>
 
 <body ng-controller="calendarCtrl">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <form class="form-inline">
-                    <div class="form-group">
-                        <select class="form-control" ng-model="calForm.month" ng-options="idx as month for (idx, month) in calRange.months">
-                        </select>
-                        <select class="form-control" ng-model="calForm.year" ng-options="year for year in calRange.years">
-                        </select>
-                    </div>
-                </form>
-            </div>
+    <form class="form-inline">
+        <div class="form-group-sm">
+            <label>Select Timeframe</label>
+            <select class="form-control" ng-model="calForm.month" ng-options="idx as month for (idx, month) in calRange.months">
+            </select>
+            <select class="form-control" ng-model="calForm.year" ng-options="year for year in calRange.years">
+            </select>
         </div>
-    </div>
-    <pre>{{calRange | json}}</pre>
-    <!--   <calendar></calendar> -->
+    </form>
+    <calendar></calendar>
     <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="./utilities/calendar-range/calendarRange.js"></script>
     <script type="text/javascript" src="./app.js"></script>

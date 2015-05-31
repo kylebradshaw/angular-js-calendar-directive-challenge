@@ -1,0 +1,12 @@
+<div class="calendar-container">
+    <div ng-repeat="name in weekly" class="calendar-cell calendar-header">
+        <div class="calendar-content">
+            {{name}}
+        </div>
+    </div>
+    <div ng-repeat="day in days.days" ng-class="{ yep: day.month == calForm.month }" class="calendar-cell">
+        <div class="calendar-content">
+            {{day.day}}
+        </div>
+    </div>
+</div>

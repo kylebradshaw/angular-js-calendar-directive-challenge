@@ -1,1 +1,89 @@
-/* your css code goes here */
+* {
+  box-sizing:border-box;
+}
+
+body {
+  padding: 0;
+  background: url('c.png') 0 0 repeat;
+}
+
+.form-inline {
+  padding: 1em;
+  /*height: 10vh;*/
+  /*text-align: center;*/
+}
+
+select.form-control {
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.form-control option {
+  font-weight: bold;
+}
+
+select:hover {
+  background-color: lightred;
+}
+
+.calendar-container {
+  margin: 0 1%;
+  border-left: 1px solid rgba(0,0,0,0.3);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  border: 0.3em solid rgba(0,0,0,0.05);
+  border-radius: 0.3em;
+/*  -webkit-box-shadow: 22px 22px 0px 8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 22px 22px 0px 8px rgba(0,0,0,0.75);
+  box-shadow: 22px 22px 0px 8px rgba(0,0,0,0.75);*/
+}
+.calendar-cell.calendar-header {
+  text-transform: uppercase;
+  background-color: #343434;
+  color: #efefef;
+  font-weight: bold;
+  min-height: 5vh;
+  opacity: 1;
+}
+
+.calendar-cell {
+  position: relative;
+  border-right: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  min-height: 14vh;
+  /*background: url('s.png') 0 0 repeat;*/
+  /*flex-basis: 14.276vw;*/
+  width: 14.276%;
+  background-color: #c0c0c0;
+  color: rgba(0,0,0,0.3);
+  /*opacity: 0.4;*/
+  -webkit-box-shadow: inset 0px 0px 12px -2px rgba(31,31,31,0.4);
+  -moz-box-shadow: inset 0px 0px 12px -2px rgba(31,31,31,0.4);
+  box-shadow: inset 0px 0px 12px -2px rgba(31,31,31,0.4);
+}
+.calendar-cell.yep:hover {
+  background-color: aliceblue;
+}
+
+.calendar-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.yep {
+  background-color: #fff;
+  color: #000;
+  opacity: 1;
+  text-shadow: 0px 1px 2px #aaa;
+}
+
+
